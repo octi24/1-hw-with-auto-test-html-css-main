@@ -1,61 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>It-incubator precourse</title>
-</head>
-<body>
-    <!-- ЗАДАНИЕ -->
-    <!-- Необходимо создать html-элементы там, где это нужно, в соответствии с правилами семантической разметки -->
-    <!-- ⚠️ Атрибут data-cy удалять нельзя! Он учавствует в проверке. Если его удалить, тесты не пройдут. -->
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>It-incubator precourse</title>
+	</head>
+	<style>
+		.checkbox {
+			display: inline-block;
+		}
+		form {
+			display: inline-block;
+		}
+		table {
+			border: 3px solid #582341;
+			box-shadow: 8px 8px 10px 0px rgba(37, 41, 53, 0.625);
+			margin-bottom: 20px;
+			th {
+				border-bottom: 2px solid #582341;
+				border-right: 2px solid #582341;
+			}
+			td {
+				border-bottom: 2px solid #582341;
+				border-right: 2px solid #582341;
+			}
+		}
+		a {
+			text-decoration: none;
+			color: #ff003c;
+			font-size: 20px;
+			text-shadow: 3px 3px 3px rgb(17, 19, 25);
+		}
+	</style>
+	<body>
+		<!-- ЗАДАНИЕ -->
+		<!-- Необходимо создать html-элементы там, где это нужно, в соответствии с правилами семантической разметки -->
+		<!-- ⚠️ Атрибут data-cy удалять нельзя! Он учавствует в проверке. Если его удалить, тесты не пройдут. -->
 
-    <header>
-        <span>IT-INCUBATOR</span>
-    </header>
+		<header>
+			<span>IT-INCUBATOR</span>
+		</header>
 
-    <section data-cy="hw1-section-main-pre">
-        <!-- 1) В этом разделе создай 3 дочерних элемента: -->
+		<section data-cy="hw1-section-main-pre">
+			<!-- 1) В этом разделе создай 3 дочерних элемента: -->
 
-        <!-- a) Заголовок первого уровня со своим ФИО -->
-        <!-- b) Несколько строк о себе: где учишься или работаешь, хобби, увлечения. Используй тег для абзаца. Длина строки должна быть больше 50-ти симвов (пробелы и др знаки припинания тоже считаются символом) -->
-        <!-- c) Фото (или любую картинку из интернета). Не забудь добавить описание на случай, если изображение не загрузится -->
-    </section>
+			<!-- a) Заголовок первого уровня со своим ФИО -->
+			<h1>Языков Максим Викторович</h1>
+			<!-- b) Несколько строк о себе: где учишься или работаешь, хобби, увлечения. Используй тег для абзаца. Длина строки должна быть больше 50-ти симвов (пробелы и др знаки припинания тоже считаются символом) -->
+			<p>
+				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi labore
+				adipisci minima, culpa tempora, nihil quod illum quae expedita debitis
+				doloremque quibusdam eos maxime, repellat voluptatum vel magni quasi
+				totam similique? Ipsum soluta quae harum rerum omnis incidunt, assumenda
+				a, officiis consequuntur, consectetur neque. Asperiores ipsum earum
+				officiis ullam consequuntur quidem illo nulla enim, rerum dolores nemo
+				et hic? Deserunt molestiae accusamus dicta, et voluptatibus assumenda
+				quidem mollitia sunt neque delectus aliquam blanditiis ab quis
+				distinctio magnam? Esse mollitia aut perspiciatis sit vitae rerum
+				ratione inventore praesentium, sequi quisquam nisi quos, facilis quis
+				nemo voluptatum unde atque dolore. Maxime, quibusdam?
+			</p>
+			<!-- c) Фото (или любую картинку из интернета). Не забудь добавить описание на случай, если изображение не загрузится -->
+			<img
+				src="https://cdn.pixabay.com/photo/2025/10/05/15/06/autumn-9875155_1280.jpg"
+				alt="squirrel" />
+		</section>
 
-    <section data-cy="hw1-section-about-pre">
-        <!-- 2) В этом разделе создай выпадающий список с разными городами (не меньше 3-х). Свой город сделай вторым в этом списке. С помощью специального атрибута, сделай так, чтобы твой город всегда был выбранным по умолчанию  -->
-        <div data-cy="hw1-unordered-list-box-pre">
-            <!-- 3) В этом разделе создай 2 дочерних элемента: -->
+		<section data-cy="hw1-section-about-pre">
+			<!-- 2) В этом разделе создай выпадающий список с разными городами (не меньше 3-х). Свой город сделай вторым в этом списке. С помощью специального атрибута, сделай так, чтобы твой город всегда был выбранным по умолчанию  -->
+			<select name="Cities" id="">
+				<option value="Minsk">Минск</option>
+				<option value="Mogilev" selected>Могилёв</option>
+				<option value="Grodno">Гродно</option>
+			</select>
 
-            <!-- a) Заголовок 2-го уровня (любимые книги/фильмы/блюда/страны... и т.п.) -->
-            <!-- b) Маркированный список. В списке должно быть не менее 3-х элементов -->
-        </div>
-        <div data-cy="hw1-ordered-list-box-pre">
-            <!-- 3) В этом разделе создай 2 дочерних элемента: -->
+			<div data-cy="hw1-unordered-list-box-pre">
+				<!-- 3) В этом разделе создай 2 дочерних элемента: -->
 
-            <!-- a) Заголовок 2-го уровня с другим названием (любимые книги/фильмы/блюда/страны... и т.п.) -->
-            <!-- b) Нумерованный (упорядоченный) список. В списке должно быть не менее 3-х элементов -->
-        </div>
-        <div data-cy="hw1-skills-box-pre">
-            <h2>Мои скиллы</h2>
-            <!-- 4) Здесь создай несколько чекбоксов с подписью (не меньше 3-х). 
+				<!-- a) Заголовок 2-го уровня (любимые книги/фильмы/блюда/страны... и т.п.) -->
+				<h2>Любимые фильмы</h2>
+				<!-- b) Маркированный список. В списке должно быть не менее 3-х элементов -->
+				<ul>
+					<li>Формула</li>
+					<li>Начало</li>
+					<li>Гарри Поттер</li>
+				</ul>
+			</div>
+			<div data-cy="hw1-ordered-list-box-pre">
+				<!-- 3) В этом разделе создай 2 дочерних элемента: -->
+
+				<!-- a) Заголовок 2-го уровня с другим названием (любимые книги/фильмы/блюда/страны... и т.п.) -->
+				<h2>Любимые Страны</h2>
+				<!-- b) Нумерованный (упорядоченный) список. В списке должно быть не менее 3-х элементов -->
+				<ol>
+					<li>Польша</li>
+					<li>Литва</li>
+					<li>Англия</li>
+				</ol>
+			</div>
+			<div data-cy="hw1-skills-box-pre">
+				<h2>Мои скиллы</h2>
+				<!-- 4) Здесь создай несколько чекбоксов с подписью (не меньше 3-х). 
                 - В подписи укажи названия любых тем по верстке (все, что знаешь или слышал). 
                 - Каждый чекбокс должен быть связан со своей подписью. Для этого чекбокс должен находиться в элементе для подписи
                 - Отметь "галочкой" (с помощью специального атрибута) темы, которые ты уже знаешь. -->
-        </div>
-        <!-- 5) Создай здесь однострочное поле для ввода текста с подсказкой "Новый скилл", которая исчезает, когда начинаешь что-то печатать (для подсказки есть специальный атрибут) -->
-        <!-- 6) Создай здесь кнопку “Добавить” -->
-        <!-- 7) Добавь горизонтальную линию (для этого есть специальный тег) -->
-        
-        <table data-cy="hw-about-table-pre">
-            <!-- 8) В таблице сделай 5 строк и 3 столбца. 
+				<div class="checkbox"><input type="checkbox" checked />HTML</div>
+				<div class="checkbox"><input type="checkbox" checked />CSS</div>
+				<div class="checkbox"><input type="checkbox" />JS</div>
+			</div>
+			<!-- 5) Создай здесь однострочное поле для ввода текста с подсказкой "Новый скилл", которая исчезает, когда начинаешь что-то печатать (для подсказки есть специальный атрибут) -->
+			<form action="handler.js" method="">
+				<input type="text" name="new-skill" id="" placeholder="Новый скилл" />
+				<!-- 6) Создай здесь кнопку “Добавить” -->
+				<button>Добавить</button>
+			</form>
+			<!-- 7) Добавь горизонтальную линию (для этого есть специальный тег) -->
+			<hr />
+
+			<table data-cy="hw-about-table-pre">
+				<!-- 8) В таблице сделай 5 строк и 3 столбца. 
                         - В первой строке ячейки заголовков, в остальных обычные ячейки
                         - Добавь границы для всей таблицы с помощью специального атрибута border="". Он устарел, но работает
                         - В последнем ряду первая ячейка должна занимать 2 столбца (как должно выглядеть - смотри образец). Таблицу можно заполнять любыми данными -->
-        </table>
-    </section>
-    <footer data-cy="hw-footer-pre">
-        <!-- 9) Создай здесь ссылку на наш сайт https://it-incubator.io/ (текст ссылки должен быть it-incubator) -->
-    </footer>
-</body>
+				<thead>
+					<tr>
+						<th>п/п</th>
+						<th>Наименование</th>
+						<th>Кол-во</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>1</td>
+						<td>Монитор</td>
+						<td>12</td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td>Клавиатура</td>
+						<td>22</td>
+					</tr>
+					<tr>
+						<td>3</td>
+						<td>Мышь</td>
+						<td>4</td>
+					</tr>
+				</tbody>
+				<tfoot>
+					<tr>
+						<td colspan="2">Итого</td>
+						<td>38</td>
+					</tr>
+				</tfoot>
+			</table>
+		</section>
+		<footer data-cy="hw-footer-pre">
+			<!-- 9) Создай здесь ссылку на наш сайт https://it-incubator.io/ (текст ссылки должен быть it-incubator) -->
+			<a href="https://it-incubator.io/">it-incubator</a>
+		</footer>
+	</body>
 </html>
