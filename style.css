@@ -8,7 +8,7 @@
   outline: 1px solid red;
   margin: 0 auto;
   width: 100%;
-  max-width: 1440px;
+  max-width: 1140px;
 }
 
 body {
@@ -119,15 +119,13 @@ select:hover,
 
 .skills-block {
   display: flex; /*    Свойства flexbox для расположения формы над элементами с классом .label */
-  flex-direction: column;
-  order: 1;
+  flex-direction: column-reverse;
 }
 
 .skills {
   display: flex;
   flex-direction: column;
   gap: 20px; /*    Свойства flexbox для расположения элементов с классом .label */
-  order: 2;
 }
 
 .books-list {
